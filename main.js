@@ -12,13 +12,13 @@ function btnClicked() {
   let d3Speed = +document.getElementById('d3-speed').value;
   let d3Limit = +document.getElementById('d3-limit').value;
 
-  ticketAssign()
-  document.getElementById('d1-ticket').innerHTML = d1Ticket;
+  document.getElementById('d1-ticket').innerHTML = ticketAssign(d1ticket);
   document.getElementById('d2-ticket').innerHTML = d2Ticket;
   document.getElementById('d3-ticket').innerHTML = d3Ticket;
 }
 
 function ticketAssign (ticket) {
+let speed;
   if (speed > limit + 40) {
     ticket = 'Really Big Ticket';
   } else if (speed > limit + 20) {
@@ -28,5 +28,5 @@ function ticketAssign (ticket) {
   } else {
     ticket = 'No Ticket';
   }
-return ticket;
+  return ticket;
 }
