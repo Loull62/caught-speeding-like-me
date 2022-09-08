@@ -12,11 +12,13 @@ function btnClicked() {
   let d3Speed = +document.getElementById('d3-speed').value;
   let d3Limit = +document.getElementById('d3-limit').value;
 
+  // retrives ticket place and assigns numbers to ticketAssign function
   document.getElementById('d1-ticket').innerHTML = ticketAssign(d1Speed, d1Limit);
   document.getElementById('d2-ticket').innerHTML = ticketAssign(d2Speed, d2Limit);
   document.getElementById('d3-ticket').innerHTML = ticketAssign(d3Speed, d3Limit);
 }
 
+// reads numbers and assigns tickets
 function ticketAssign (speed, limit) {
   if (speed > limit + 40) {
     return 'Really Big Ticket';
